@@ -2,9 +2,9 @@ import streamlit as st
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
+import os
 
-# Configuration
-API_URL = st.secrets.get("API_URL", "http://localhost:5000/api")  # Will use the secret in production
+API_URL = os.environ.get("API_URL", "http://localhost:5000/api")
 
 # Page config
 st.set_page_config(
